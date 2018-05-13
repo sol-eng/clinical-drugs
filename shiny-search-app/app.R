@@ -1,4 +1,3 @@
-
 library(shiny)
 library(dplyr)
 library(purrr)
@@ -7,7 +6,7 @@ library(stringr)
 library(htmltools)
 library(bigrquery)
 library(visNetwork)
-library(openfda)
+library(DT)
 
 definitions <- read_csv("definitions.csv")
 
