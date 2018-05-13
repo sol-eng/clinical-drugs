@@ -9,20 +9,7 @@ library(bigrquery)
 library(visNetwork)
 library(openfda)
 
-
-
-
 definitions <- read_csv("definitions.csv")
-
-con <- DBI::dbConnect(
-  bigquery(),
-  project = "bigquery-public-data",
-  dataset = "nlm_rxnorm",
-  billing = "bigrquery-demo",
-  use_legacy_sql = FALSE
-)
-
-rx_pathways <- tbl(con, "rxn_all_pathways_current") 
 
 
 result_item <- function(id = 0, 
@@ -65,19 +52,32 @@ ui <- function(request) {
   fluidPage(
     titlePanel("Clinical Drug Information"),
     fluidRow(htmltools::br()),
-    fluidRow(textInput("search", label = "Search Rx", value = ""),
-             htmlOutput("results")),
+    fluidRow(column(11,textInput("search", label = "Search Rx", value = ""))),
+    fluidRow(column(11,htmlOutput("results"))),
     fluidRow(
-      column(6, visNetworkOutput("network")),
-      column(3, dataTableOutput("medications")),
-      column(3, dataTableOutput("administered"))
+      column(7, visNetworkOutput("network")),
+      column(5, dataTableOutput("administered"))
+    ),
+    fluidRow(
+      column(4, dataTableOutput("medications")),
+      column(8, dataTableOutput("ingredients"))
     )
   )
 }
 
+
   
 server <- function(input, output, session) {
   
+  con <- DBI::dbConnect(
+    bigquery(),
+    project = "bigquery-public-data",
+    dataset = "nlm_rxnorm",
+    billing = "bigrquery-demo",
+    use_legacy_sql = FALSE
+  )
+  
+  rx_pathways <- tbl(con, "rxn_all_pathways_current") 
   
   
   output$results <- renderText({
@@ -112,8 +112,6 @@ server <- function(input, output, session) {
   
   })
   
-  
-  
   item_details <- reactive({
     if(req(as.numeric(input$search))){
       rx_pathways %>%
@@ -125,9 +123,10 @@ server <- function(input, output, session) {
         ) %>%
         select(bn_id, bn_name) %>%
         inner_join(rx_pathways, by = c("bn_id" = "SOURCE_RXCUI")) %>%
-        collect() 
+        collect()
     }
   })
+
   
   output$medications <- renderDataTable({
     if(req(as.numeric(input$search))){
@@ -140,7 +139,8 @@ server <- function(input, output, session) {
         datatable(
           options = list(
             searching = FALSE,
-            paging = FALSE
+            pagelength = 10,
+            target = "cell"
           ),
           rownames = FALSE
         )
@@ -149,23 +149,76 @@ server <- function(input, output, session) {
     }
   })
   
+  
+  
   output$administered <- renderDataTable({
     if(req(as.numeric(input$search))){
       item_details()  %>%
         filter(TARGET_TTY == "DF") %>%
-        group_by(TARGET_TTY, TARGET_NAME) %>%
-        summarise() %>%
+        group_by(TARGET_RXCUI, TARGET_NAME, SOURCE_NAME ) %>%
+        tally() %>% 
         ungroup() %>%
-        select(Administered = TARGET_NAME) %>%
+        select(-n) %>%
+        group_by(TARGET_RXCUI, TARGET_NAME) %>%
+        tally() %>%
+        ungroup() %>%
+        select(
+          Code = TARGET_RXCUI,
+          Administered = TARGET_NAME,
+          Medications = n
+        ) %>%
         datatable(
           options = list(
             searching = FALSE,
-            paging = FALSE
+            pageLength = 10,
+            target = "cell"
           ),
           rownames = FALSE
         )
     } else {
       NULL
+    }
+  })
+  
+  observeEvent(input$administered_cell_clicked, {
+    cell <- input$administered_cell_clicked
+    if(as.numeric(req(cell$value)) > 0) {
+      updateTextInput(session, "search", value = cell$value)
+    }
+  })
+  
+  output$ingredients <- renderDataTable({
+    if(req(as.numeric(input$search))){
+      item_details()  %>%
+        filter(TARGET_TTY == "IN") %>%
+        group_by(TARGET_RXCUI, TARGET_NAME, SOURCE_NAME ) %>%
+        tally() %>% 
+        ungroup() %>%
+        select(-n) %>%
+        group_by(TARGET_RXCUI, TARGET_NAME) %>%
+        tally() %>%
+        ungroup() %>%
+        select(
+          Code = TARGET_RXCUI,
+          Ingredients = TARGET_NAME,
+          Medications = n
+        ) %>%
+        datatable(
+          options = list(
+            searching = FALSE,
+            pageLength = 10
+          ),
+          rownames = FALSE
+        )
+    } else {
+      NULL
+    }
+  })
+  
+  observeEvent(input$ingredients_cell_clicked, {
+    cell <- input$ingredients_cell_clicked
+    if(as.numeric(req(cell$value)) > 0) {
+      updateTextInput(session, "search", value = cell$value)
     }
   })
   
@@ -197,12 +250,11 @@ server <- function(input, output, session) {
         visLayout(randomSeed = 123) %>% 
         visPhysics(stabilization = FALSE) %>%
         visEdges(smooth = FALSE)
-  } else {
+    } else {
       NULL
     }
   })
-
+  
 }
 
 shinyApp(ui, server, enableBookmarking = "url")
-
