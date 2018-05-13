@@ -64,14 +64,17 @@ result_stats <- function(query_time  = "",
 ui <- function(request) {
   fluidPage(
     titlePanel("Clinical Drug Information"),
-    mainPanel(width = 12,
-              htmltools::br(),
-              textInput("search", label = "Search Rx", value = ""),
-              htmlOutput("results"),
-              visNetworkOutput("network")
-              )
+    fluidRow(htmltools::br()),
+    fluidRow(textInput("search", label = "Search Rx", value = ""),
+             htmlOutput("results")),
+    fluidRow(
+      column(6, visNetworkOutput("network")),
+      column(3, dataTableOutput("medications")),
+      column(3, dataTableOutput("administered"))
     )
+  )
 }
+
   
 server <- function(input, output, session) {
   
@@ -109,7 +112,9 @@ server <- function(input, output, session) {
   
   })
   
-  result_item <- reactive({
+  
+  
+  item_details <- reactive({
     if(req(as.numeric(input$search))){
       rx_pathways %>%
         filter(TARGET_RXCUI == input$search | SOURCE_RXCUI == input$search) %>%
@@ -124,10 +129,50 @@ server <- function(input, output, session) {
     }
   })
   
+  output$medications <- renderDataTable({
+    if(req(as.numeric(input$search))){
+      item_details()  %>%
+        filter(TARGET_TTY == "BN") %>%
+        group_by(TARGET_TTY, TARGET_NAME) %>%
+        summarise() %>%
+        ungroup() %>%
+        select(Medications = TARGET_NAME) %>%
+        datatable(
+          options = list(
+            searching = FALSE,
+            paging = FALSE
+          ),
+          rownames = FALSE
+        )
+    } else {
+      NULL
+    }
+  })
+  
+  output$administered <- renderDataTable({
+    if(req(as.numeric(input$search))){
+      item_details()  %>%
+        filter(TARGET_TTY == "DF") %>%
+        group_by(TARGET_TTY, TARGET_NAME) %>%
+        summarise() %>%
+        ungroup() %>%
+        select(Administered = TARGET_NAME) %>%
+        datatable(
+          options = list(
+            searching = FALSE,
+            paging = FALSE
+          ),
+          rownames = FALSE
+        )
+    } else {
+      NULL
+    }
+  })
+  
   output$network <- renderVisNetwork({
     
     if(req(as.numeric(input$search))){
-      result_item1 <- result_item() %>%
+      result_item1 <- item_details() %>%
         filter(TARGET_TTY %in% c("BN", "DF", "IN"))
       
       nodes <- bind_rows(
