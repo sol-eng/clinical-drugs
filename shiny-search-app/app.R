@@ -120,7 +120,7 @@ server <- function(input, output, session) {
 
   item_details <- reactive({
     if (req(as.numeric(input$search))) {
-      rx_pathways %>%
+      df <- rx_pathways %>%
         filter(TARGET_RXCUI == input$search | SOURCE_RXCUI == input$search) %>%
         filter(TARGET_TTY == "BN" | SOURCE_TTY == "BN") %>%
         mutate(
@@ -129,23 +129,39 @@ server <- function(input, output, session) {
         ) %>%
         select(bn_id, bn_name) %>%
         inner_join(rx_pathways, by = c("bn_id" = "SOURCE_RXCUI")) %>%
-        collect()
+        group_by_all() %>%
+        summarise() %>%
+        collect() 
+      
+      df %>%
+        ungroup()%>%
+        left_join(definitions, by = c("SOURCE_TTY" = "TTY" )) %>%
+        rename(
+          source_name = SOURCE_NAME,
+          source_tty  = SOURCE_TTY,
+          target_id = TARGET_RXCUI,
+          target_name = TARGET_NAME,
+          target_tty = TARGET_TTY,
+          target_category = Name
+        ) %>%
+        select(
+          - Example,
+          - Description
+        )
+      
     }
   })
   
   output$title <- renderText({
     if (req(as.numeric(input$search))) {
-      item <- item_details() %>%
-        head(1) %>%
-        mutate(
-          type = case_when(
-            SOURCE_TTY == "IN" ~ "Ingredient",
-            SOURCE_TTY == "BN" ~ "Brand",
-            SOURCE_TTY == "DF" ~ "Administration method",
-            TRUE ~ ""
-          )
-        )
-      paste0("<h2>" , pull(item, SOURCE_NAME), " (", pull(item, type), ")", "</h2>")
+    
+      item <- item_details() %>% 
+        filter(target_id == input$search) %>% 
+        select(target_name, target_category) %>% 
+        head(1) %>% 
+        as.character()
+      
+      paste0("<h2>" , item[1], " (", item[2], ")", "</h2>")
     }
     
   })
@@ -153,11 +169,11 @@ server <- function(input, output, session) {
   output$medications <- renderDataTable({
     if (req(as.numeric(input$search))) {
       item_details() %>%
-        filter(TARGET_TTY == "BN") %>%
-        group_by(TARGET_TTY, TARGET_NAME) %>%
+        filter(target_tty == "BN") %>%
+        group_by(target_tty, target_name) %>%
         summarise() %>%
         ungroup() %>%
-        select(Medications = TARGET_NAME) %>%
+        select(Medications = target_name) %>%
         datatable(
           options = list(
             searching = FALSE,
@@ -176,17 +192,17 @@ server <- function(input, output, session) {
   output$administered <- renderDataTable({
     if (req(as.numeric(input$search))) {
       item_details() %>%
-        filter(TARGET_TTY == "DF") %>%
-        group_by(TARGET_RXCUI, TARGET_NAME, SOURCE_NAME) %>%
+        filter(target_tty == "DF") %>%
+        group_by(target_id, target_name, source_name) %>%
         tally() %>%
         ungroup() %>%
         select(-n) %>%
-        group_by(TARGET_RXCUI, TARGET_NAME) %>%
+        group_by(target_id, target_name) %>%
         tally() %>%
         ungroup() %>%
         select(
-          Code = TARGET_RXCUI,
-          Administered = TARGET_NAME,
+          Code = target_id,
+          Administered = target_name,
           Medications = n
         ) %>%
         datatable(
@@ -213,17 +229,12 @@ server <- function(input, output, session) {
   output$ingredients <- renderDataTable({
     if (req(as.numeric(input$search))) {
       item_details() %>%
-        filter(TARGET_TTY == "IN") %>%
-        group_by(TARGET_RXCUI, TARGET_NAME, SOURCE_NAME) %>%
+        filter(target_tty == "IN") %>% 
+        group_by(target_id, target_name) %>%
         tally() %>%
-        ungroup() %>%
-        select(-n) %>%
-        group_by(TARGET_RXCUI, TARGET_NAME) %>%
-        tally() %>%
-        ungroup() %>%
         select(
-          Code = TARGET_RXCUI,
-          Ingredients = TARGET_NAME,
+          Code = target_id,
+          Ingredients = target_name,
           Medications = n
         ) %>%
         datatable(
@@ -250,11 +261,11 @@ server <- function(input, output, session) {
   output$network <- renderVisNetwork({
     if (req(as.numeric(input$search))) {
       result_item1 <- item_details() %>%
-        filter(TARGET_TTY %in% c("BN", "DF", "IN"))
+        filter(target_tty %in% c("BN", "DF", "IN"))
 
       nodes <- bind_rows(
-        select(result_item1, id = TARGET_RXCUI, title = TARGET_NAME, group = TARGET_TTY),
-        select(result_item1, id = bn_id, title = SOURCE_NAME, group = SOURCE_TTY)
+        select(result_item1, id = target_id, title = target_name, group = target_tty),
+        select(result_item1, id = bn_id, title = source_name, group = source_tty)
         ) %>%
         group_by(id, title, group) %>%
         summarise() %>%
@@ -264,7 +275,7 @@ server <- function(input, output, session) {
       edges <- result_item1 %>%
         select(
           from = bn_id, 
-          to = TARGET_RXCUI
+          to = target_id
           ) %>%
         filter(from != to) %>%
         group_by(from, to) %>%
