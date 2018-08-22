@@ -180,7 +180,7 @@ server <- function(input, output, session) {
             pagelength = 10,
             bLengthChange = FALSE,
             bPaginate = FALSE,
-            target = "cell"
+            target = "row"
           ),
           rownames = FALSE
         )
@@ -242,7 +242,8 @@ server <- function(input, output, session) {
             searching = FALSE,
             pageLength = 10,
             bLengthChange = FALSE,
-            bPaginate = FALSE
+            bPaginate = FALSE,
+            target = "row"
           ),
           rownames = FALSE
         )
@@ -253,7 +254,7 @@ server <- function(input, output, session) {
 
   observeEvent(input$ingredients_cell_clicked, {
     cell <- input$ingredients_cell_clicked
-    if (as.numeric(req(cell$value)) > 0) {
+    if (req(cell$col==0)) {
       updateTextInput(session, "search", value = cell$value)
     }
   })
