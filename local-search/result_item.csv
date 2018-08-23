@@ -1,0 +1,235 @@
+bn_id,bn_name,SOURCE_TTY,SOURCE_NAME,TARGET_RXCUI,TARGET_TTY,TARGET_NAME
+8887,Ventolin,BN,Ventolin,8887,BN,Ventolin
+8887,Ventolin,BN,Ventolin,8887,BN,Ventolin
+8887,Ventolin,BN,Ventolin,721654,DF,Metered Dose Inhaler
+8887,Ventolin,BN,Ventolin,721654,DF,Metered Dose Inhaler
+8887,Ventolin,BN,Ventolin,435,IN,Albuterol
+8887,Ventolin,BN,Ventolin,435,IN,Albuterol
+8887,Ventolin,BN,Ventolin,1151123,DFG,Inhalant Product
+8887,Ventolin,BN,Ventolin,1151123,DFG,Inhalant Product
+8887,Ventolin,BN,Ventolin,142153,PIN,Albuterol Sulfate
+8887,Ventolin,BN,Ventolin,142153,PIN,Albuterol Sulfate
+8887,Ventolin,BN,Ventolin,801095,SBD,60 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]
+8887,Ventolin,BN,Ventolin,801095,SBD,60 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]
+8887,Ventolin,BN,Ventolin,859088,SBD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]
+8887,Ventolin,BN,Ventolin,859088,SBD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]
+8887,Ventolin,BN,Ventolin,745679,SCD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler
+8887,Ventolin,BN,Ventolin,745679,SCD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler
+8887,Ventolin,BN,Ventolin,801092,SCD,60 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler
+8887,Ventolin,BN,Ventolin,801092,SCD,60 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler
+8887,Ventolin,BN,Ventolin,801093,SBDC,Albuterol 0.09 MG/ACTUAT [Ventolin]
+8887,Ventolin,BN,Ventolin,801093,SBDC,Albuterol 0.09 MG/ACTUAT [Ventolin]
+8887,Ventolin,BN,Ventolin,801094,SBDF,Albuterol Metered Dose Inhaler [Ventolin]
+8887,Ventolin,BN,Ventolin,801094,SBDF,Albuterol Metered Dose Inhaler [Ventolin]
+8887,Ventolin,BN,Ventolin,1187868,SBDG,Ventolin Inhalant Product
+8887,Ventolin,BN,Ventolin,1187868,SBDG,Ventolin Inhalant Product
+8887,Ventolin,BN,Ventolin,329498,SCDC,Albuterol 0.09 MG/ACTUAT
+8887,Ventolin,BN,Ventolin,329498,SCDC,Albuterol 0.09 MG/ACTUAT
+8887,Ventolin,BN,Ventolin,745678,SCDF,Albuterol Metered Dose Inhaler
+8887,Ventolin,BN,Ventolin,745678,SCDF,Albuterol Metered Dose Inhaler
+8887,Ventolin,BN,Ventolin,1154602,SCDG,Albuterol Inhalant Product
+8887,Ventolin,BN,Ventolin,1154602,SCDG,Albuterol Inhalant Product
+151539,Combivent,BN,Combivent,151539,BN,Combivent
+151539,Combivent,BN,Combivent,151539,BN,Combivent
+151539,Combivent,BN,Combivent,721654,DF,Metered Dose Inhaler
+151539,Combivent,BN,Combivent,721654,DF,Metered Dose Inhaler
+151539,Combivent,BN,Combivent,7213,IN,Ipratropium
+151539,Combivent,BN,Combivent,7213,IN,Ipratropium
+151539,Combivent,BN,Combivent,435,IN,Albuterol
+151539,Combivent,BN,Combivent,435,IN,Albuterol
+151539,Combivent,BN,Combivent,1151123,DFG,Inhalant Product
+151539,Combivent,BN,Combivent,1151123,DFG,Inhalant Product
+151539,Combivent,BN,Combivent,214199,MIN,Albuterol / Ipratropium
+151539,Combivent,BN,Combivent,214199,MIN,Albuterol / Ipratropium
+151539,Combivent,BN,Combivent,142153,PIN,Albuterol Sulfate
+151539,Combivent,BN,Combivent,142153,PIN,Albuterol Sulfate
+151539,Combivent,BN,Combivent,203212,PIN,Ipratropium Bromide
+151539,Combivent,BN,Combivent,203212,PIN,Ipratropium Bromide
+151539,Combivent,BN,Combivent,836366,SBD,200 ACTUAT Albuterol 0.09 MG/ACTUAT / Ipratropium Bromide 0.018 MG/ACTUAT Metered Dose Inhaler [Combivent]
+151539,Combivent,BN,Combivent,836366,SBD,200 ACTUAT Albuterol 0.09 MG/ACTUAT / Ipratropium Bromide 0.018 MG/ACTUAT Metered Dose Inhaler [Combivent]
+151539,Combivent,BN,Combivent,1190225,SBD,120 ACTUAT Albuterol 0.1 MG/ACTUAT / Ipratropium Bromide 0.02 MG/ACTUAT Metered Dose Inhaler [Combivent]
+151539,Combivent,BN,Combivent,1190225,SBD,120 ACTUAT Albuterol 0.1 MG/ACTUAT / Ipratropium Bromide 0.02 MG/ACTUAT Metered Dose Inhaler [Combivent]
+151539,Combivent,BN,Combivent,1190220,SCD,120 ACTUAT Albuterol 0.1 MG/ACTUAT / Ipratropium Bromide 0.02 MG/ACTUAT Metered Dose Inhaler
+151539,Combivent,BN,Combivent,1190220,SCD,120 ACTUAT Albuterol 0.1 MG/ACTUAT / Ipratropium Bromide 0.02 MG/ACTUAT Metered Dose Inhaler
+151539,Combivent,BN,Combivent,836286,SCD,200 ACTUAT Albuterol 0.09 MG/ACTUAT / Ipratropium Bromide 0.018 MG/ACTUAT Metered Dose Inhaler
+151539,Combivent,BN,Combivent,836286,SCD,200 ACTUAT Albuterol 0.09 MG/ACTUAT / Ipratropium Bromide 0.018 MG/ACTUAT Metered Dose Inhaler
+151539,Combivent,BN,Combivent,1190222,SBDC,Albuterol 0.1 MG/ACTUAT / Ipratropium Bromide 0.02 MG/ACTUAT [Combivent]
+151539,Combivent,BN,Combivent,1190222,SBDC,Albuterol 0.1 MG/ACTUAT / Ipratropium Bromide 0.02 MG/ACTUAT [Combivent]
+151539,Combivent,BN,Combivent,836365,SBDC,Albuterol 0.09 MG/ACTUAT / Ipratropium Bromide 0.018 MG/ACTUAT [Combivent]
+151539,Combivent,BN,Combivent,836365,SBDC,Albuterol 0.09 MG/ACTUAT / Ipratropium Bromide 0.018 MG/ACTUAT [Combivent]
+151539,Combivent,BN,Combivent,745736,SBDF,Albuterol / Ipratropium Metered Dose Inhaler [Combivent]
+151539,Combivent,BN,Combivent,745736,SBDF,Albuterol / Ipratropium Metered Dose Inhaler [Combivent]
+151539,Combivent,BN,Combivent,1166889,SBDG,Combivent Inhalant Product
+151539,Combivent,BN,Combivent,1166889,SBDG,Combivent Inhalant Product
+151539,Combivent,BN,Combivent,1190219,SCDC,Ipratropium Bromide 0.02 MG/ACTUAT
+151539,Combivent,BN,Combivent,1190219,SCDC,Ipratropium Bromide 0.02 MG/ACTUAT
+151539,Combivent,BN,Combivent,836285,SCDC,Ipratropium Bromide 0.018 MG/ACTUAT
+151539,Combivent,BN,Combivent,836285,SCDC,Ipratropium Bromide 0.018 MG/ACTUAT
+151539,Combivent,BN,Combivent,332347,SCDC,Albuterol 0.1 MG/ACTUAT
+151539,Combivent,BN,Combivent,332347,SCDC,Albuterol 0.1 MG/ACTUAT
+151539,Combivent,BN,Combivent,329498,SCDC,Albuterol 0.09 MG/ACTUAT
+151539,Combivent,BN,Combivent,329498,SCDC,Albuterol 0.09 MG/ACTUAT
+151539,Combivent,BN,Combivent,745734,SCDF,Albuterol / Ipratropium Metered Dose Inhaler
+151539,Combivent,BN,Combivent,745734,SCDF,Albuterol / Ipratropium Metered Dose Inhaler
+151539,Combivent,BN,Combivent,1154598,SCDG,Albuterol / Ipratropium Inhalant Product
+151539,Combivent,BN,Combivent,1154598,SCDG,Albuterol / Ipratropium Inhalant Product
+202908,Proventil,BN,Proventil,202908,BN,Proventil
+202908,Proventil,BN,Proventil,202908,BN,Proventil
+202908,Proventil,BN,Proventil,721654,DF,Metered Dose Inhaler
+202908,Proventil,BN,Proventil,721654,DF,Metered Dose Inhaler
+202908,Proventil,BN,Proventil,435,IN,Albuterol
+202908,Proventil,BN,Proventil,435,IN,Albuterol
+202908,Proventil,BN,Proventil,1151123,DFG,Inhalant Product
+202908,Proventil,BN,Proventil,1151123,DFG,Inhalant Product
+202908,Proventil,BN,Proventil,142153,PIN,Albuterol Sulfate
+202908,Proventil,BN,Proventil,142153,PIN,Albuterol Sulfate
+202908,Proventil,BN,Proventil,746763,SBD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Proventil]
+202908,Proventil,BN,Proventil,746763,SBD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Proventil]
+202908,Proventil,BN,Proventil,745679,SCD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler
+202908,Proventil,BN,Proventil,745679,SCD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler
+202908,Proventil,BN,Proventil,573621,SBDC,Albuterol 0.09 MG/ACTUAT [Proventil]
+202908,Proventil,BN,Proventil,573621,SBDC,Albuterol 0.09 MG/ACTUAT [Proventil]
+202908,Proventil,BN,Proventil,746762,SBDF,Albuterol Metered Dose Inhaler [Proventil]
+202908,Proventil,BN,Proventil,746762,SBDF,Albuterol Metered Dose Inhaler [Proventil]
+202908,Proventil,BN,Proventil,1182471,SBDG,Proventil Inhalant Product
+202908,Proventil,BN,Proventil,1182471,SBDG,Proventil Inhalant Product
+202908,Proventil,BN,Proventil,329498,SCDC,Albuterol 0.09 MG/ACTUAT
+202908,Proventil,BN,Proventil,329498,SCDC,Albuterol 0.09 MG/ACTUAT
+202908,Proventil,BN,Proventil,745678,SCDF,Albuterol Metered Dose Inhaler
+202908,Proventil,BN,Proventil,745678,SCDF,Albuterol Metered Dose Inhaler
+202908,Proventil,BN,Proventil,1154602,SCDG,Albuterol Inhalant Product
+202908,Proventil,BN,Proventil,1154602,SCDG,Albuterol Inhalant Product
+285059,DuoNeb,BN,DuoNeb,285059,BN,DuoNeb
+285059,DuoNeb,BN,DuoNeb,285059,BN,DuoNeb
+285059,DuoNeb,BN,DuoNeb,346161,DF,Inhalant Solution
+285059,DuoNeb,BN,DuoNeb,346161,DF,Inhalant Solution
+285059,DuoNeb,BN,DuoNeb,7213,IN,Ipratropium
+285059,DuoNeb,BN,DuoNeb,7213,IN,Ipratropium
+285059,DuoNeb,BN,DuoNeb,435,IN,Albuterol
+285059,DuoNeb,BN,DuoNeb,435,IN,Albuterol
+285059,DuoNeb,BN,DuoNeb,1151123,DFG,Inhalant Product
+285059,DuoNeb,BN,DuoNeb,1151123,DFG,Inhalant Product
+285059,DuoNeb,BN,DuoNeb,214199,MIN,Albuterol / Ipratropium
+285059,DuoNeb,BN,DuoNeb,214199,MIN,Albuterol / Ipratropium
+285059,DuoNeb,BN,DuoNeb,142153,PIN,Albuterol Sulfate
+285059,DuoNeb,BN,DuoNeb,142153,PIN,Albuterol Sulfate
+285059,DuoNeb,BN,DuoNeb,203212,PIN,Ipratropium Bromide
+285059,DuoNeb,BN,DuoNeb,203212,PIN,Ipratropium Bromide
+285059,DuoNeb,BN,DuoNeb,1437704,SBD,Albuterol 0.833 MG/ML / Ipratropium Bromide 0.167 MG/ML Inhalant Solution [DuoNeb]
+285059,DuoNeb,BN,DuoNeb,1437704,SBD,Albuterol 0.833 MG/ML / Ipratropium Bromide 0.167 MG/ML Inhalant Solution [DuoNeb]
+285059,DuoNeb,BN,DuoNeb,1437702,SCD,Albuterol 0.833 MG/ML / Ipratropium Bromide 0.167 MG/ML Inhalant Solution
+285059,DuoNeb,BN,DuoNeb,1437702,SCD,Albuterol 0.833 MG/ML / Ipratropium Bromide 0.167 MG/ML Inhalant Solution
+285059,DuoNeb,BN,DuoNeb,1437703,SBDC,Albuterol 0.833 MG/ML / Ipratropium Bromide 0.167 MG/ML [DuoNeb]
+285059,DuoNeb,BN,DuoNeb,1437703,SBDC,Albuterol 0.833 MG/ML / Ipratropium Bromide 0.167 MG/ML [DuoNeb]
+285059,DuoNeb,BN,DuoNeb,542137,SBDF,Albuterol / Ipratropium Inhalant Solution [DuoNeb]
+285059,DuoNeb,BN,DuoNeb,542137,SBDF,Albuterol / Ipratropium Inhalant Solution [DuoNeb]
+285059,DuoNeb,BN,DuoNeb,1166997,SBDG,DuoNeb Inhalant Product
+285059,DuoNeb,BN,DuoNeb,1166997,SBDG,DuoNeb Inhalant Product
+285059,DuoNeb,BN,DuoNeb,1437701,SCDC,Ipratropium Bromide 0.167 MG/ML
+285059,DuoNeb,BN,DuoNeb,1437701,SCDC,Ipratropium Bromide 0.167 MG/ML
+285059,DuoNeb,BN,DuoNeb,405969,SCDC,Albuterol 0.833 MG/ML
+285059,DuoNeb,BN,DuoNeb,405969,SCDC,Albuterol 0.833 MG/ML
+285059,DuoNeb,BN,DuoNeb,377303,SCDF,Albuterol / Ipratropium Inhalant Solution
+285059,DuoNeb,BN,DuoNeb,377303,SCDF,Albuterol / Ipratropium Inhalant Solution
+285059,DuoNeb,BN,DuoNeb,1154598,SCDG,Albuterol / Ipratropium Inhalant Product
+285059,DuoNeb,BN,DuoNeb,1154598,SCDG,Albuterol / Ipratropium Inhalant Product
+352394,Accuneb,BN,Accuneb,352394,BN,Accuneb
+352394,Accuneb,BN,Accuneb,352394,BN,Accuneb
+352394,Accuneb,BN,Accuneb,346161,DF,Inhalant Solution
+352394,Accuneb,BN,Accuneb,346161,DF,Inhalant Solution
+352394,Accuneb,BN,Accuneb,435,IN,Albuterol
+352394,Accuneb,BN,Accuneb,435,IN,Albuterol
+352394,Accuneb,BN,Accuneb,1151123,DFG,Inhalant Product
+352394,Accuneb,BN,Accuneb,1151123,DFG,Inhalant Product
+352394,Accuneb,BN,Accuneb,142153,PIN,Albuterol Sulfate
+352394,Accuneb,BN,Accuneb,142153,PIN,Albuterol Sulfate
+352394,Accuneb,BN,Accuneb,352051,SBD,Albuterol 0.417 MG/ML Inhalant Solution [Accuneb]
+352394,Accuneb,BN,Accuneb,352051,SBD,Albuterol 0.417 MG/ML Inhalant Solution [Accuneb]
+352394,Accuneb,BN,Accuneb,351136,SCD,Albuterol 0.417 MG/ML Inhalant Solution
+352394,Accuneb,BN,Accuneb,351136,SCD,Albuterol 0.417 MG/ML Inhalant Solution
+352394,Accuneb,BN,Accuneb,575803,SBDC,Albuterol 0.417 MG/ML [Accuneb]
+352394,Accuneb,BN,Accuneb,575803,SBDC,Albuterol 0.417 MG/ML [Accuneb]
+352394,Accuneb,BN,Accuneb,361886,SBDF,Albuterol Inhalant Solution [Accuneb]
+352394,Accuneb,BN,Accuneb,361886,SBDF,Albuterol Inhalant Solution [Accuneb]
+352394,Accuneb,BN,Accuneb,1165995,SBDG,Accuneb Inhalant Product
+352394,Accuneb,BN,Accuneb,1165995,SBDG,Accuneb Inhalant Product
+352394,Accuneb,BN,Accuneb,360330,SCDC,Albuterol 0.417 MG/ML
+352394,Accuneb,BN,Accuneb,360330,SCDC,Albuterol 0.417 MG/ML
+352394,Accuneb,BN,Accuneb,361842,SCDF,Albuterol Inhalant Solution
+352394,Accuneb,BN,Accuneb,361842,SCDF,Albuterol Inhalant Solution
+352394,Accuneb,BN,Accuneb,1154602,SCDG,Albuterol Inhalant Product
+352394,Accuneb,BN,Accuneb,1154602,SCDG,Albuterol Inhalant Product
+353091,Vospire,BN,Vospire,353091,BN,Vospire
+353091,Vospire,BN,Vospire,353091,BN,Vospire
+353091,Vospire,BN,Vospire,316945,DF,Extended Release Oral Tablet
+353091,Vospire,BN,Vospire,316945,DF,Extended Release Oral Tablet
+353091,Vospire,BN,Vospire,435,IN,Albuterol
+353091,Vospire,BN,Vospire,435,IN,Albuterol
+353091,Vospire,BN,Vospire,1151133,DFG,Pill
+353091,Vospire,BN,Vospire,1151133,DFG,Pill
+353091,Vospire,BN,Vospire,1151131,DFG,Oral Product
+353091,Vospire,BN,Vospire,1151131,DFG,Oral Product
+353091,Vospire,BN,Vospire,142153,PIN,Albuterol Sulfate
+353091,Vospire,BN,Vospire,142153,PIN,Albuterol Sulfate
+353091,Vospire,BN,Vospire,901483,SBD,12 HR Albuterol 4 MG Extended Release Oral Tablet [Vospire]
+353091,Vospire,BN,Vospire,901483,SBD,12 HR Albuterol 4 MG Extended Release Oral Tablet [Vospire]
+353091,Vospire,BN,Vospire,901484,SBD,12 HR Albuterol 8 MG Extended Release Oral Tablet [Vospire]
+353091,Vospire,BN,Vospire,901484,SBD,12 HR Albuterol 8 MG Extended Release Oral Tablet [Vospire]
+353091,Vospire,BN,Vospire,359145,SCD,12 HR Albuterol 8 MG Extended Release Oral Tablet
+353091,Vospire,BN,Vospire,359145,SCD,12 HR Albuterol 8 MG Extended Release Oral Tablet
+353091,Vospire,BN,Vospire,359144,SCD,12 HR Albuterol 4 MG Extended Release Oral Tablet
+353091,Vospire,BN,Vospire,359144,SCD,12 HR Albuterol 4 MG Extended Release Oral Tablet
+353091,Vospire,BN,Vospire,575710,SBDC,Albuterol 8 MG [Vospire]
+353091,Vospire,BN,Vospire,575710,SBDC,Albuterol 8 MG [Vospire]
+353091,Vospire,BN,Vospire,575713,SBDC,Albuterol 4 MG [Vospire]
+353091,Vospire,BN,Vospire,575713,SBDC,Albuterol 4 MG [Vospire]
+353091,Vospire,BN,Vospire,370106,SBDF,Albuterol Extended Release Oral Tablet [Vospire]
+353091,Vospire,BN,Vospire,370106,SBDF,Albuterol Extended Release Oral Tablet [Vospire]
+353091,Vospire,BN,Vospire,1187594,SBDG,Vospire Pill
+353091,Vospire,BN,Vospire,1187594,SBDG,Vospire Pill
+353091,Vospire,BN,Vospire,1187593,SBDG,Vospire Oral Product
+353091,Vospire,BN,Vospire,1187593,SBDG,Vospire Oral Product
+353091,Vospire,BN,Vospire,315288,SCDC,Albuterol 4 MG
+353091,Vospire,BN,Vospire,315288,SCDC,Albuterol 4 MG
+353091,Vospire,BN,Vospire,343177,SCDC,Albuterol 8 MG
+353091,Vospire,BN,Vospire,343177,SCDC,Albuterol 8 MG
+353091,Vospire,BN,Vospire,370543,SCDF,Albuterol Extended Release Oral Tablet
+353091,Vospire,BN,Vospire,370543,SCDF,Albuterol Extended Release Oral Tablet
+353091,Vospire,BN,Vospire,1154606,SCDG,Albuterol Pill
+353091,Vospire,BN,Vospire,1154606,SCDG,Albuterol Pill
+353091,Vospire,BN,Vospire,1154605,SCDG,Albuterol Oral Product
+353091,Vospire,BN,Vospire,1154605,SCDG,Albuterol Oral Product
+647295,ProAir,BN,ProAir,647295,BN,ProAir
+647295,ProAir,BN,ProAir,647295,BN,ProAir
+647295,ProAir,BN,ProAir,721654,DF,Metered Dose Inhaler
+647295,ProAir,BN,ProAir,721654,DF,Metered Dose Inhaler
+647295,ProAir,BN,ProAir,744995,DF,Dry Powder Inhaler
+647295,ProAir,BN,ProAir,744995,DF,Dry Powder Inhaler
+647295,ProAir,BN,ProAir,435,IN,Albuterol
+647295,ProAir,BN,ProAir,435,IN,Albuterol
+647295,ProAir,BN,ProAir,1151123,DFG,Inhalant Product
+647295,ProAir,BN,ProAir,1151123,DFG,Inhalant Product
+647295,ProAir,BN,ProAir,1649961,SBD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Dry Powder Inhaler [ProAir]
+647295,ProAir,BN,ProAir,1649961,SBD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Dry Powder Inhaler [ProAir]
+647295,ProAir,BN,ProAir,745752,SBD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]
+647295,ProAir,BN,ProAir,745752,SBD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]
+647295,ProAir,BN,ProAir,745679,SCD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler
+647295,ProAir,BN,ProAir,745679,SCD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler
+647295,ProAir,BN,ProAir,1649560,SCD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Dry Powder Inhaler
+647295,ProAir,BN,ProAir,1649560,SCD,200 ACTUAT Albuterol 0.09 MG/ACTUAT Dry Powder Inhaler
+647295,ProAir,BN,ProAir,1649958,SBDC,Albuterol 0.09 MG/ACTUAT [ProAir]
+647295,ProAir,BN,ProAir,1649958,SBDC,Albuterol 0.09 MG/ACTUAT [ProAir]
+647295,ProAir,BN,ProAir,1649959,SBDF,Albuterol Dry Powder Inhaler [ProAir]
+647295,ProAir,BN,ProAir,1649959,SBDF,Albuterol Dry Powder Inhaler [ProAir]
+647295,ProAir,BN,ProAir,1649967,SBDF,Albuterol Metered Dose Inhaler [ProAir]
+647295,ProAir,BN,ProAir,1649967,SBDF,Albuterol Metered Dose Inhaler [ProAir]
+647295,ProAir,BN,ProAir,1649960,SBDG,ProAir Inhalant Product
+647295,ProAir,BN,ProAir,1649960,SBDG,ProAir Inhalant Product
+647295,ProAir,BN,ProAir,329498,SCDC,Albuterol 0.09 MG/ACTUAT
+647295,ProAir,BN,ProAir,329498,SCDC,Albuterol 0.09 MG/ACTUAT
+647295,ProAir,BN,ProAir,1649559,SCDF,Albuterol Dry Powder Inhaler
+647295,ProAir,BN,ProAir,1649559,SCDF,Albuterol Dry Powder Inhaler
+647295,ProAir,BN,ProAir,745678,SCDF,Albuterol Metered Dose Inhaler
+647295,ProAir,BN,ProAir,745678,SCDF,Albuterol Metered Dose Inhaler
+647295,ProAir,BN,ProAir,1154602,SCDG,Albuterol Inhalant Product
+647295,ProAir,BN,ProAir,1154602,SCDG,Albuterol Inhalant Product

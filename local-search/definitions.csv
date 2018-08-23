@@ -1,0 +1,21 @@
+﻿TTY,Name,Description,Example
+IN,Ingredient,A compound or moiety that gives the drug its distinctive clinical properties. Ingredients generally use the United States Adopted Name (USAN).,Fluoxetine
+PIN,Precise Ingredient,A specified form of the ingredient that may or may not be clinically active. Most precise ingredients are salt or isomer forms.,Fluoxetine Hydrochloride
+MIN,Multiple Ingredients,"Two or more ingredients appearing together in a single drug preparation, created from SCDF. In rare cases when IN/PIN or PIN/PIN combinations of the same base ingredient exist, created from SCD.",Fluoxetine / Olanzapine
+SCDC,Semantic Clinical Drug Component,Ingredient + Strength,Fluoxetine 4 MG/ML
+SCDF,Semantic Clinical Drug Form,Ingredient + Dose Form,Fluoxetine Oral Solution
+SCDG,Semantic Clinical Dose Form Group,Ingredient + Dose Form Group,Fluoxetine Oral Product
+SCD,Semantic Clinical Drug,Ingredient + Strength + Dose Form,Fluoxetine 4 MG/ML Oral Solution
+GPCK,Generic Pack,{# (Ingredient + Strength + Dose Form) / # (Ingredient + Strength + Dose Form)} Pack,{11 (varenicline 0.5 MG Oral Tablet) / 42 (varenicline 1 MG Oral Tablet) } Pack
+BN,Brand Name,A proprietary name for a family of products containing a specific active ingredient.,Prozac
+SBDC,Semantic Branded Drug Component,Ingredient + Strength + Brand Name,Fluoxetine 4 MG/ML [Prozac]
+SBDF,Semantic Branded Drug Form,Ingredient + Dose Form + Brand Name,Fluoxetine Oral Solution [Prozac]
+SBDG,Semantic Branded Dose Form Group,Brand Name + Dose Form Group,Prozac Pill
+SBD,Semantic Branded Drug,Ingredient + Strength + Dose Form + Brand Name,Fluoxetine 4 MG/ML Oral Solution [Prozac]
+BPCK,Brand Name Pack,{# (Ingredient Strength Dose Form) / # (Ingredient Strength Dose Form)} Pack [Brand Name],{12 (Ethinyl Estradiol 0.035 MG / Norethindrone 0.5 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / Norethindrone 1 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Leena 28 Day]
+PSN,Prescribable Name,"Synonym of another TTY, given for clarity and for display purposes in electronic prescribing applications. Only one PSN per concept.",Leena 28 Day Pack
+SY,Synonym,"Synonym of another TTY, given for clarity.",Prozac 4 MG/ML Oral Solution
+TMSY,Tall Man Lettering Synonym,"Tall Man Lettering synonym of another TTY, given to distinguish between commonly confused drugs.",FLUoxetine 10 MG Oral Capsule [PROzac]
+DF,Dose Form,See Appendix 2 for a full list of Dose Forms.,Oral Solution
+ET,Dose Form Entry Term,Entry terms for dose forms (TTY=DF).,Nasal Drops
+DFG,Dose Form Group,See Appendix 3 for a full list of Dose Form Groups.,Oral Liquid
