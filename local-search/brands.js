@@ -17,9 +17,6 @@ var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
 var group = svg.append("g");
 
-
-
-
 // Resize
 r2d3.onResize(function(width, height) {
   var minSize = Math.min(width, height);
@@ -55,19 +52,12 @@ r2d3.onRender(function(data, svg, width, height, options) {
       .attr("id", function(d) { return d.id; })
       .attr("r", function(d) { return d.r; })
       .style("fill", function(d) { return "#fa8775"; })
-      .attr('opacity', function(d) { return d.value / max_value(); })
-      ;
+      .attr('opacity', function(d) { return d.value / max_value(); });
 
   function max_value() {return d3.max(data, function (d) {return d.value; });} 
   node.append("text")
-      //.attr("x", 0)
-      //.attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
       .text(function(d) { return d.id })
-      //.style('font-size', function(d, i, nodes) { return i; }) 
-      //.text(function(d, i, nodes) { return nodes.length ; })
-      .style('font-size', function(d) { return d.r * 0.3; }) 
-      //.style("fill", function(d) { return color(d.package); })
-      ;
+      .style('font-size', function(d) { return d.r * 0.3; });
 
   r2d3.resize(width, height);
 });

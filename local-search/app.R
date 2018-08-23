@@ -16,7 +16,7 @@ ui <- function(request) {
           11,
           material_card(
             title = "Search Rx",
-            textInput("search", label = "", value = ""),
+            textInput("search", label = "", value = "435"),
             depth = 4,
             shiny::tags$p("Terms to try: 'aspirin', 'albuterol', 'inhaler'")
           )
@@ -186,14 +186,13 @@ server <- function(input, output, session) {
     updateTextInput(session, "search", value = input$dose_clicked)
   })
   
-  
   output$ing <- renderD3({
     item_details() %>%
       filter(target_tty == "IN") %>% 
       group_by(target_id, target_name) %>%
       tally() %>%
       select(
-        #id = target_id,
+        target_id,
         id = target_name,
         #label = target_name,
         value = n
