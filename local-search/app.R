@@ -193,11 +193,12 @@ server <- function(input, output, session) {
       group_by(target_id, target_name) %>%
       tally() %>%
       select(
-        x = target_id,
-        label = target_name,
-        y = n
+        #id = target_id,
+        id = target_name,
+        #label = target_name,
+        value = n
       ) %>%
-      r2d3("in_bar.js")
+      r2d3("brands.js")
   })
   
   output$ingredients <- renderDataTable({
