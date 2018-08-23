@@ -30,7 +30,7 @@ ui <- function(request) {
       ),
       fluidRow(
         column(6, dataTableOutput("medications")),
-        column(6, dataTableOutput("ingredients"))
+        column(6, d3Output("ing"))
       )
     )
   )
@@ -182,44 +182,24 @@ server <- function(input, output, session) {
     }
   })
     
-  
-  output$administered <- renderDataTable({
-    if (req(as.numeric(input$search))) {
-      item_details() %>%
-        filter(target_tty == "DF") %>%
-        group_by(target_id, target_name, source_name) %>%
-        tally() %>%
-        ungroup() %>%
-        select(-n) %>%
-        group_by(target_id, target_name) %>%
-        tally() %>%
-        ungroup() %>%
-        select(
-          Code = target_id,
-          Administered = target_name,
-          Medications = n
-        ) %>%
-        datatable(
-          options = list(
-            searching = FALSE,
-            pageLength = 10,
-            bLengthChange = FALSE,
-            bPaginate = FALSE,
-            target = "row"
-          ),
-          rownames = FALSE
-        )
-    } else {
-      NULL
-    }})
-
-  observeEvent(input$administered_cell_clicked, {
-    cell <- input$administered_cell_clicked
-    if (req(cell$col==0)) {
-      updateTextInput(session, "search", value = cell$value)
-    }
+  observeEvent(input$dose_clicked, {
+    updateTextInput(session, "search", value = input$dose_clicked)
   })
-
+  
+  
+  output$ing <- renderD3({
+    item_details() %>%
+      filter(target_tty == "IN") %>% 
+      group_by(target_id, target_name) %>%
+      tally() %>%
+      select(
+        x = target_id,
+        label = target_name,
+        y = n
+      ) %>%
+      r2d3("in_bar.js")
+  })
+  
   output$ingredients <- renderDataTable({
     if (req(as.numeric(input$search))) {
       item_details() %>%

@@ -105,5 +105,5 @@ svg.append('text')
   .attr('y', svg_height() * 0.05)
   .style('font-size', '20px') 
   .style('font-family', 'sans-serif')
-  .text('Brand Names by Dose Form ');
+  .text('Brand Names by Ingredients');
   
